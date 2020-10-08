@@ -129,7 +129,7 @@ public class Consensus {
     }
     
     /**
-     * Increments the ETS of this consensus, thus advancing 
+     * Increments the ETS of this consensus, thus advancing
      * to the next epoch
      */
     public void incEts() {
@@ -137,7 +137,7 @@ public class Consensus {
     }
     
     /**
-     * Increments the ETS of this consensus, thus advancing 
+     * Increments the ETS of this consensus, thus advancing
      * to the next epoch
      * 
      * @param ets New ETS for this consensus, to advance

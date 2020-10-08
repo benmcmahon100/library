@@ -48,8 +48,8 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../bftsmart/tom/AsynchServiceProxy.html" title="class in bftsmart.tom"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../bftsmart/tom/ReplicaContext.html" title="class in bftsmart.tom"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../bftsmart/tom/AsynchServiceProxy.html" title="class in tom"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../bftsmart/tom/ReplicaContext.html" title="class in tom"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../index.html?bftsmart/tom/MessageContext.html" target="_top">Frames</a></li>
@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">bftsmart.tom</div>
+<div class="subTitle">tom</div>
 <h2 title="Class MessageContext" class="title">Class MessageContext</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>bftsmart.tom.MessageContext</li>
+<li>tom.MessageContext</li>
 </ul>
 </li>
 </ul>
@@ -120,7 +120,7 @@ implements java.io.Serializable</pre>
  the consensus instance in which it was ordered.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../serialized-form.html#bftsmart.tom.MessageContext">Serialized Form</a></dd>
+<dd><a href="../../serialized-form.html#tom.MessageContext">Serialized Form</a></dd>
 </dl>
 </li>
 </ul>
@@ -159,9 +159,9 @@ implements java.io.Serializable</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../bftsmart/tom/MessageContext.html#MessageContext-int-int-bftsmart.tom.core.messages.TOMMessageType-int-int-int-int-byte:A-long-int-long-int-int-int-java.util.Set-bftsmart.tom.core.messages.TOMMessage-boolean-">MessageContext</a></span>(int&nbsp;sender,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../bftsmart/tom/MessageContext.html#MessageContext-int-int-tom.core.messages.TOMMessageType-int-int-int-int-byte:A-long-int-long-int-int-int-java.util.Set-tom.core.messages.TOMMessage-boolean-">MessageContext</a></span>(int&nbsp;sender,
               int&nbsp;viewID,
-              bftsmart.tom.core.messages.TOMMessageType&nbsp;type,
+              tom.core.messages.TOMMessageType&nbsp;type,
               int&nbsp;session,
               int&nbsp;sequence,
               int&nbsp;operationId,
@@ -173,8 +173,8 @@ implements java.io.Serializable</pre>
               int&nbsp;regency,
               int&nbsp;leader,
               int&nbsp;consensusId,
-              java.util.Set&lt;bftsmart.consensus.messages.ConsensusMessage&gt;&nbsp;proof,
-              bftsmart.tom.core.messages.TOMMessage&nbsp;firstInBatch,
+              java.util.Set&lt;consensus.messages.ConsensusMessage&gt;&nbsp;proof,
+              tom.core.messages.TOMMessage&nbsp;firstInBatch,
               boolean&nbsp;noOp)</code>
 <div class="block">Constructor</div>
 </td>
@@ -202,7 +202,7 @@ implements java.io.Serializable</pre>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>bftsmart.tom.core.messages.TOMMessage</code></td>
+<td class="colFirst"><code>tom.core.messages.TOMMessage</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../bftsmart/tom/MessageContext.html#getFirstInBatch--">getFirstInBatch</a></span>()</code>
 <div class="block">Returns the first request in the ordered batch</div>
 </td>
@@ -233,7 +233,7 @@ implements java.io.Serializable</pre>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>java.util.Set&lt;bftsmart.consensus.messages.ConsensusMessage&gt;</code></td>
+<td class="colFirst"><code>java.util.Set&lt;consensus.messages.ConsensusMessage&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../bftsmart/tom/MessageContext.html#getProof--">getProof</a></span>()</code>
 <div class="block">Returns the proof for the consensus.</div>
 </td>
@@ -287,7 +287,7 @@ implements java.io.Serializable</pre>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
-<td class="colFirst"><code>bftsmart.tom.core.messages.TOMMessageType</code></td>
+<td class="colFirst"><code>tom.core.messages.TOMMessageType</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../bftsmart/tom/MessageContext.html#getType--">getType</a></span>()</code>
 <div class="block">Returns the request type</div>
 </td>
@@ -311,7 +311,7 @@ implements java.io.Serializable</pre>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
-<td class="colFirst"><code>bftsmart.tom.core.messages.TOMMessage</code></td>
+<td class="colFirst"><code>tom.core.messages.TOMMessage</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../bftsmart/tom/MessageContext.html#recreateTOMMessage-byte:A-">recreateTOMMessage</a></span>(byte[]&nbsp;content)</code>
 <div class="block">Generates a TOMMessage for its associated requests using the new info that it now supports since the previous commit.</div>
 </td>
@@ -361,7 +361,7 @@ implements java.io.Serializable</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="MessageContext-int-int-bftsmart.tom.core.messages.TOMMessageType-int-int-int-int-byte:A-long-int-long-int-int-int-java.util.Set-bftsmart.tom.core.messages.TOMMessage-boolean-">
+<a name="MessageContext-int-int-tom.core.messages.TOMMessageType-int-int-int-int-byte:A-long-int-long-int-int-int-java.util.Set-tom.core.messages.TOMMessage-boolean-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -369,7 +369,7 @@ implements java.io.Serializable</pre>
 <h4>MessageContext</h4>
 <pre>public&nbsp;MessageContext(int&nbsp;sender,
                       int&nbsp;viewID,
-                      bftsmart.tom.core.messages.TOMMessageType&nbsp;type,
+                      tom.core.messages.TOMMessageType&nbsp;type,
                       int&nbsp;session,
                       int&nbsp;sequence,
                       int&nbsp;operationId,
@@ -381,8 +381,8 @@ implements java.io.Serializable</pre>
                       int&nbsp;regency,
                       int&nbsp;leader,
                       int&nbsp;consensusId,
-                      java.util.Set&lt;bftsmart.consensus.messages.ConsensusMessage&gt;&nbsp;proof,
-                      bftsmart.tom.core.messages.TOMMessage&nbsp;firstInBatch,
+                      java.util.Set&lt;consensus.messages.ConsensusMessage&gt;&nbsp;proof,
+                      tom.core.messages.TOMMessage&nbsp;firstInBatch,
                       boolean&nbsp;noOp)</pre>
 <div class="block">Constructor</div>
 <dl>
@@ -435,7 +435,7 @@ implements java.io.Serializable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getType</h4>
-<pre>public&nbsp;bftsmart.tom.core.messages.TOMMessageType&nbsp;getType()</pre>
+<pre>public&nbsp;tom.core.messages.TOMMessageType&nbsp;getType()</pre>
 <div class="block">Returns the request type</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -619,7 +619,7 @@ implements java.io.Serializable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getProof</h4>
-<pre>public&nbsp;java.util.Set&lt;bftsmart.consensus.messages.ConsensusMessage&gt;&nbsp;getProof()</pre>
+<pre>public&nbsp;java.util.Set&lt;consensus.messages.ConsensusMessage&gt;&nbsp;getProof()</pre>
 <div class="block">Returns the proof for the consensus.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -647,7 +647,7 @@ implements java.io.Serializable</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getFirstInBatch</h4>
-<pre>public&nbsp;bftsmart.tom.core.messages.TOMMessage&nbsp;getFirstInBatch()</pre>
+<pre>public&nbsp;tom.core.messages.TOMMessage&nbsp;getFirstInBatch()</pre>
 <div class="block">Returns the first request in the ordered batch</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -699,7 +699,7 @@ implements java.io.Serializable</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>recreateTOMMessage</h4>
-<pre>public&nbsp;bftsmart.tom.core.messages.TOMMessage&nbsp;recreateTOMMessage(byte[]&nbsp;content)</pre>
+<pre>public&nbsp;tom.core.messages.TOMMessage&nbsp;recreateTOMMessage(byte[]&nbsp;content)</pre>
 <div class="block">Generates a TOMMessage for its associated requests using the new info that it now supports since the previous commit.
  It is assumed that the byte array passed to this method is the serialized request associated to the original TOMMessage.</div>
 <dl>
@@ -737,8 +737,8 @@ implements java.io.Serializable</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../bftsmart/tom/AsynchServiceProxy.html" title="class in bftsmart.tom"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../bftsmart/tom/ReplicaContext.html" title="class in bftsmart.tom"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../bftsmart/tom/AsynchServiceProxy.html" title="class in tom"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../bftsmart/tom/ReplicaContext.html" title="class in tom"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../index.html?bftsmart/tom/MessageContext.html" target="_top">Frames</a></li>

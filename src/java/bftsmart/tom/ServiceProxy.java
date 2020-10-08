@@ -351,9 +351,10 @@ public class ServiceProxy extends TOMSender {
 	}
 
 	//******* EDUARDO BEGIN **************//
-        /**
-         * @deprecated
-         */
+	/**
+	 * @deprecated
+	 */
+	@Deprecated
 	protected void reconfigureTo(View v) {
 		logger.debug("Installing a most up-to-date view with id=" + v.getId());
 		getViewManager().reconfigureTo(v);

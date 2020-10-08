@@ -174,6 +174,7 @@ public class ServiceReplica {
      * 
      * @deprecated 
      */
+    @Deprecated
     public void joinMsgReceived(VMMessage msg) {
         ReconfigureReply r = msg.getReply();
 
@@ -197,6 +198,7 @@ public class ServiceReplica {
     /**
      * @deprecated 
      */
+    @Deprecated
     public final void receiveReadonlyMessage(TOMMessage message, MessageContext msgCtx) {
         TOMMessage response;
 
@@ -276,6 +278,7 @@ public class ServiceReplica {
      * 
      * @deprecated
      */
+    @Deprecated
     public void receiveMessages(int consId[], int regencies[], int leaders[], CertifiedDecision[] cDecs, TOMMessage[][] requests) {
         int numRequests = 0;
         int consensusCount = 0;

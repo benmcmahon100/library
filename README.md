@@ -30,10 +30,10 @@ The system configurations also have to be specified (see`config/system.config`).
 You can run the counter demonstration by executing the following commands, from within the main directory across four different consoles (4 replicas, to tolerate 1 fault):
 
 ```
-./runscripts/smartrun.sh bftsmart.demo.counter.CounterServer 0
-./runscripts/smartrun.sh bftsmart.demo.counter.CounterServer 1
-./runscripts/smartrun.sh bftsmart.demo.counter.CounterServer 2
-./runscripts/smartrun.sh bftsmart.demo.counter.CounterServer 3
+./runscripts/smartrun.sh demo.counter.CounterServer 0
+./runscripts/smartrun.sh demo.counter.CounterServer 1
+./runscripts/smartrun.sh demo.counter.CounterServer 2
+./runscripts/smartrun.sh demo.counter.CounterServer 3
 ```
 
 **Important tip #4:** If you are getting timeout messages, it is possible that the application you are running takes too long to process the requests or the network delay is too high and PROPOSE messages from the leader does not arrive in time, so replicas may start the leader change protocol. To prevent that, try to increase the `system.totalordermulticast.timeout` parameter in 'config/system.config'.
@@ -43,7 +43,7 @@ You can run the counter demonstration by executing the following commands, from 
 Once all replicas are ready, the client can be launched as follows:
 
 ```
-./runscripts/smartrun.sh bftsmart.demo.counter.CounterClient 1001 <increment> [<number of operations>]
+./runscripts/smartrun.sh demo.counter.CounterClient 1001 <increment> [<number of operations>]
 ```
 
 If `<increment>` equals 0 the request will be read-only. Default `<number of operations>` equals 1000.
@@ -52,12 +52,12 @@ If `<increment>` equals 0 the request will be read-only. Default `<number of ope
   
 ## State transfer protocol(s)
 
-BFT-SMaRt offers two state transfer protocols. The first is a basic protocol that can be used by extending the classes `bftsmart.tom.server.defaultservices.DefaultRecoverable` and `bftsmart.tom.server.defaultservices.DefaultSingleRecoverable`. Thee classes logs requests into memory and periodically takes snapshots of the application state.
+BFT-SMaRt offers two state transfer protocols. The first is a basic protocol that can be used by extending the classes `tom.server.defaultservices.DefaultRecoverable` and `tom.server.defaultservices.DefaultSingleRecoverable`. Thee classes logs requests into memory and periodically takes snapshots of the application state.
 
 The second, more advanced protocol can be used by extending the class 
-`bftsmart.tom.server.defaultservices.durability.DurabilityCoordinator`. This protocol stores its logs to disk. To mitigate the latency of writing to disk, such tasks is done in batches and in parallel with the requests' execution. Additionally, the snapshots are taken at different points of the execution in different replicas.
+`tom.server.defaultservices.durability.DurabilityCoordinator`. This protocol stores its logs to disk. To mitigate the latency of writing to disk, such tasks is done in batches and in parallel with the requests' execution. Additionally, the snapshots are taken at different points of the execution in different replicas.
 
-**Important tip #7:** We recommend developers to use `bftsmart.tom.server.defaultservices.DefaultRecoverable`, since it is the most stable of the three classes.
+**Important tip #7:** We recommend developers to use `tom.server.defaultservices.DefaultRecoverable`, since it is the most stable of the three classes.
 
 **Important tip #8:** regardless of the chosen protocol, developers must avoid using Java API objects like `HashSet` or `HashMap`, and use `TreeSet` or `TreeMap` instead. This is because serialization of Hash* objects is not deterministic, i.e, it generates different byte arrays for equal objects. This will lead to problems after more than `f` replicas used the state transfer protocol to recover from failures.
 
@@ -66,8 +66,8 @@ The second, more advanced protocol can be used by extending the class
 The library also implements a reconfiguration protocol that can be used to add/remove replicas from the initial group. You can add/remove replicas on-the-fly by executing the following commands:
 
 ```
-./runscripts/smartrun.sh bftsmart.reconfiguration.util.DefaultVMServices <smart id> <ip address> <port> (to add a replica to the group)
-./runscripts/smartrun.sh bftsmart.reconfiguration.util.DefaultVMServices <smart id> (to remove a replica from the group)
+./runscripts/smartrun.sh reconfiguration.util.DefaultVMServices <smart id> <ip address> <port> (to add a replica to the group)
+./runscripts/smartrun.sh reconfiguration.util.DefaultVMServices <smart id> (to remove a replica from the group)
 ```
 
 **Important tip #9:** everytime you use the reconfiguration protocol, you must make sure that all replicas and the host where you invoke the above commands have the latest `config/currentView` file. The current implementation of BFT-SMaRt does not provide any mechanism to distribute this file, so you will need to distribute it on your own (e.g., using the `scp` command). You also need to make sure that any client that starts executing can read from the latest `config/currentView` file.
@@ -81,7 +81,7 @@ You can run BFT-SMaRt in crash-faults only mode by setting the `system.bft` para
 If you need to generate public/private keys for more replicas or clients, you can use the following command:
 
 ```
-./runscripts/smartrun.sh bftsmart.tom.util.RSAKeyPairGenerator <id> <key size>
+./runscripts/smartrun.sh tom.util.RSAKeyPairGenerator <id> <key size>
 ```
 
 Keys are stored in the `config/keys` folder. The command above creates key pairs both for clients and replicas. Alternatively, you can set the `system.communication.defaultkeys` to `true` in the `config/system.config` file to forces all processes to use the same public/private keys pair and secret key. This is useful when deploying experiments and benchmarks, because it enables the programmer to avoid generating keys for all principals involved in the system. However, this must not be used in a real deployments.
@@ -96,6 +96,6 @@ If you are interested in learning more about BFT-SMaRt, you can read:
 
 - The paper about its state machine protocol published in [EDCC'12](http://www.di.fc.ul.pt/~bessani/publications/edcc12-modsmart.pdf):
 - The paper about its advanced state transfer protocol published in [Usenix'13](http://www.di.fc.ul.pt/~bessani/publications/usenix13-dsmr.pdf):
-- The tool description published in [DSN'14](http://www.di.fc.ul.pt/~bessani/publications/dsn14-bftsmart.pdf):
+- The tool description published in [DSN'14](http://www.di.fc.ul.pt/~bessani/publications/dsn14-pdf):
 
 ***Feel free to contact us if you have any questions!***

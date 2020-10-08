@@ -265,7 +265,7 @@ public final class Acceptor {
 	 */
 	private void writeReceived(Epoch epoch, int sender, byte[] value) {
 		int cid = epoch.getConsensus().getId();
-		logger.debug("WRITE received from:{}, for consensus cId:{}", 
+		logger.debug("WRITE received from:{}, for consensus cId:{}",
 				sender, cid);
 		epoch.setWrite(sender, value);
 

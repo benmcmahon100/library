@@ -91,7 +91,7 @@ var activeTableTab = "activeTableTab";
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">bftsmart.tom.server.defaultservices.durability</div>
+<div class="subTitle">tom.server.defaultservices.durability</div>
 <h2 title="Class DurabilityCoordinator" class="title">Class DurabilityCoordinator</h2>
 </div>
 <div class="contentContainer">
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>bftsmart.tom.server.defaultservices.durability.DurabilityCoordinator</li>
+<li>tom.server.defaultservices.durability.DurabilityCoordinator</li>
 </ul>
 </li>
 </ul>
@@ -108,13 +108,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../bftsmart/tom/server/BatchExecutable.html" title="interface in bftsmart.tom.server">BatchExecutable</a>, <a href="../../../../../bftsmart/tom/server/Executable.html" title="interface in bftsmart.tom.server">Executable</a>, <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a></dd>
+<dd><a href="../../../../../bftsmart/tom/server/BatchExecutable.html" title="interface in tom.server">BatchExecutable</a>, <a href="../../../../../bftsmart/tom/server/Executable.html" title="interface in tom.server">Executable</a>, <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public abstract class <span class="typeNameLabel">DurabilityCoordinator</span>
 extends java.lang.Object
-implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a>, <a href="../../../../../bftsmart/tom/server/BatchExecutable.html" title="interface in bftsmart.tom.server">BatchExecutable</a></pre>
+implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a>, <a href="../../../../../bftsmart/tom/server/BatchExecutable.html" title="interface in tom.server">BatchExecutable</a></pre>
 <div class="block">Implements the Collaborative State Transfer protocol. In this protocol, instead of
  all replicas send the state and log, or state and hash of the log, the replicas
  are divided into three groups. One group sends the state, another group sends the
@@ -160,29 +160,29 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>abstract byte[][]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#appExecuteBatch-byte:A:A-bftsmart.tom.MessageContext:A-">appExecuteBatch</a></span>(byte[][]&nbsp;commands,
-               <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>[]&nbsp;msgCtxs)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#appExecuteBatch-byte:A:A-tom.MessageContext:A-">appExecuteBatch</a></span>(byte[][]&nbsp;commands,
+               <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>[]&nbsp;msgCtxs)</code>
 <div class="block">Execute a batch of ordered requests</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>abstract byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#appExecuteUnordered-byte:A-bftsmart.tom.MessageContext-">appExecuteUnordered</a></span>(byte[]&nbsp;command,
-                   <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>&nbsp;msgCtx)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#appExecuteUnordered-byte:A-tom.MessageContext-">appExecuteUnordered</a></span>(byte[]&nbsp;command,
+                   <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>&nbsp;msgCtx)</code>
 <div class="block">Execute an unordered request</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>byte[][]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#executeBatch-byte:A:A-bftsmart.tom.MessageContext:A-">executeBatch</a></span>(byte[][]&nbsp;commands,
-            <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>[]&nbsp;msgCtxs)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#executeBatch-byte:A:A-tom.MessageContext:A-">executeBatch</a></span>(byte[][]&nbsp;commands,
+            <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>[]&nbsp;msgCtxs)</code>
 <div class="block">Execute a batch of requests.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#executeUnordered-byte:A-bftsmart.tom.MessageContext-">executeUnordered</a></span>(byte[]&nbsp;command,
-                <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>&nbsp;msgCtx)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#executeUnordered-byte:A-tom.MessageContext-">executeUnordered</a></span>(byte[]&nbsp;command,
+                <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>&nbsp;msgCtx)</code>
 <div class="block">Method called to execute a request totally ordered.</div>
 </td>
 </tr>
@@ -197,18 +197,18 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>bftsmart.statemanagement.strategy.durability.CSTState</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#getState-bftsmart.statemanagement.strategy.durability.CSTRequest-">getState</a></span>(bftsmart.statemanagement.strategy.durability.CSTRequest&nbsp;cstRequest)</code>&nbsp;</td>
+<td class="colFirst"><code>statemanagement.strategy.durability.CSTState</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#getState-statemanagement.strategy.durability.CSTRequest-">getState</a></span>(statemanagement.strategy.durability.CSTRequest&nbsp;cstRequest)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>bftsmart.statemanagement.ApplicationState</code></td>
+<td class="colFirst"><code>statemanagement.ApplicationState</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#getState-int-boolean-">getState</a></span>(int&nbsp;cid,
         boolean&nbsp;sendState)</code>
 <div class="block">This  method should return a representation of the application state</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>bftsmart.statemanagement.StateManager</code></td>
+<td class="colFirst"><code>statemanagement.StateManager</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#getStateManager--">getStateManager</a></span>()</code>
 <div class="block">Recoverers implementing this interface will have to chose among
  different options of state managers like DurableStateManager or
@@ -223,9 +223,9 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#noOp-int-byte:A:A-bftsmart.tom.MessageContext:A-">noOp</a></span>(int&nbsp;CID,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#noOp-int-byte:A:A-tom.MessageContext:A-">noOp</a></span>(int&nbsp;CID,
     byte[][]&nbsp;operations,
-    <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>[]&nbsp;msgCtxs)</code>
+    <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>[]&nbsp;msgCtxs)</code>
 <div class="block">This method is invoked by ServiceReplica to indicate that a consensus instance
  finished without delivering anything to the application (e.g., an instance
  only decided a single reconfiguration operation.</div>
@@ -233,22 +233,22 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#Op-int-byte:A-bftsmart.tom.MessageContext-">Op</a></span>(int&nbsp;CID,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#Op-int-byte:A-tom.MessageContext-">Op</a></span>(int&nbsp;CID,
   byte[]&nbsp;requests,
-  <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>&nbsp;msgCtx)</code>
+  <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>&nbsp;msgCtx)</code>
 <div class="block">This method is invoked by ServiceReplica to pass information that was
  decided in a particular consensus instance.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#setReplicaContext-bftsmart.tom.ReplicaContext-">setReplicaContext</a></span>(<a href="../../../../../bftsmart/tom/ReplicaContext.html" title="class in bftsmart.tom">ReplicaContext</a>&nbsp;replicaContext)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#setReplicaContext-tom.ReplicaContext-">setReplicaContext</a></span>(<a href="../../../../../bftsmart/tom/ReplicaContext.html" title="class in tom">ReplicaContext</a>&nbsp;replicaContext)</code>
 <div class="block">Sets the replica context</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#setState-bftsmart.statemanagement.ApplicationState-">setState</a></span>(bftsmart.statemanagement.ApplicationState&nbsp;recvState)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../bftsmart/tom/server/defaultservices/durability/DurabilityCoordinator.html#setState-statemanagement.ApplicationState-">setState</a></span>(statemanagement.ApplicationState&nbsp;recvState)</code>
 <div class="block">Sets the state to the representation obtained in the state transfer protocol</div>
 </td>
 </tr>
@@ -291,19 +291,19 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="executeBatch-byte:A:A-bftsmart.tom.MessageContext:A-">
+<a name="executeBatch-byte:A:A-tom.MessageContext:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>executeBatch</h4>
 <pre>public&nbsp;byte[][]&nbsp;executeBatch(byte[][]&nbsp;commands,
-                             <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>[]&nbsp;msgCtxs)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/BatchExecutable.html#executeBatch-byte:A:A-bftsmart.tom.MessageContext:A-">BatchExecutable</a></code></span></div>
+                             <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>[]&nbsp;msgCtxs)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/BatchExecutable.html#executeBatch-byte:A:A-tom.MessageContext:A-">BatchExecutable</a></code></span></div>
 <div class="block">Execute a batch of requests.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/BatchExecutable.html#executeBatch-byte:A:A-bftsmart.tom.MessageContext:A-">executeBatch</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/BatchExecutable.html" title="interface in bftsmart.tom.server">BatchExecutable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/BatchExecutable.html#executeBatch-byte:A:A-tom.MessageContext:A-">executeBatch</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/BatchExecutable.html" title="interface in tom.server">BatchExecutable</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commands</code> - The batch of requests</dd>
 <dd><code>msgCtxs</code> - The context associated to each request</dd>
@@ -317,13 +317,13 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>getState</h4>
-<pre>public&nbsp;bftsmart.statemanagement.ApplicationState&nbsp;getState(int&nbsp;cid,
+<pre>public&nbsp;statemanagement.ApplicationState&nbsp;getState(int&nbsp;cid,
                                                           boolean&nbsp;sendState)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#getState-int-boolean-">Recoverable</a></code></span></div>
 <div class="block">This  method should return a representation of the application state</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#getState-int-boolean-">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#getState-int-boolean-">getState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cid</code> - Consensus up to which the application should return an Application state</dd>
 <dd><code>sendState</code> - true if the replica should send a complete
@@ -333,45 +333,45 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </dl>
 </li>
 </ul>
-<a name="setState-bftsmart.statemanagement.ApplicationState-">
+<a name="setState-statemanagement.ApplicationState-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setState</h4>
-<pre>public&nbsp;int&nbsp;setState(bftsmart.statemanagement.ApplicationState&nbsp;recvState)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setState-bftsmart.statemanagement.ApplicationState-">Recoverable</a></code></span></div>
+<pre>public&nbsp;int&nbsp;setState(statemanagement.ApplicationState&nbsp;recvState)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setState-statemanagement.ApplicationState-">Recoverable</a></code></span></div>
 <div class="block">Sets the state to the representation obtained in the state transfer protocol</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setState-bftsmart.statemanagement.ApplicationState-">setState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setState-statemanagement.ApplicationState-">setState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>recvState</code> - State obtained in the state transfer protocol</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 </dl>
 </li>
 </ul>
-<a name="getState-bftsmart.statemanagement.strategy.durability.CSTRequest-">
+<a name="getState-statemanagement.strategy.durability.CSTRequest-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getState</h4>
-<pre>public&nbsp;bftsmart.statemanagement.strategy.durability.CSTState&nbsp;getState(bftsmart.statemanagement.strategy.durability.CSTRequest&nbsp;cstRequest)</pre>
+<pre>public&nbsp;statemanagement.strategy.durability.CSTState&nbsp;getState(statemanagement.strategy.durability.CSTRequest&nbsp;cstRequest)</pre>
 </li>
 </ul>
-<a name="setReplicaContext-bftsmart.tom.ReplicaContext-">
+<a name="setReplicaContext-tom.ReplicaContext-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setReplicaContext</h4>
-<pre>public&nbsp;void&nbsp;setReplicaContext(<a href="../../../../../bftsmart/tom/ReplicaContext.html" title="class in bftsmart.tom">ReplicaContext</a>&nbsp;replicaContext)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setReplicaContext-bftsmart.tom.ReplicaContext-">Recoverable</a></code></span></div>
+<pre>public&nbsp;void&nbsp;setReplicaContext(<a href="../../../../../bftsmart/tom/ReplicaContext.html" title="class in tom">ReplicaContext</a>&nbsp;replicaContext)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setReplicaContext-tom.ReplicaContext-">Recoverable</a></code></span></div>
 <div class="block">Sets the replica context</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setReplicaContext-bftsmart.tom.ReplicaContext-">setReplicaContext</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#setReplicaContext-tom.ReplicaContext-">setReplicaContext</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>replicaContext</code> - The replica context</dd>
 </dl>
@@ -383,7 +383,7 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>getStateManager</h4>
-<pre>public&nbsp;bftsmart.statemanagement.StateManager&nbsp;getStateManager()</pre>
+<pre>public&nbsp;statemanagement.StateManager&nbsp;getStateManager()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#getStateManager--">Recoverable</a></code></span></div>
 <div class="block">Recoverers implementing this interface will have to chose among
  different options of state managers like DurableStateManager or
@@ -391,7 +391,7 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
  strategy to manage the state and return it in this method.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#getStateManager--">getStateManager</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#getStateManager--">getStateManager</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the implementation of state manager that suplies the strategy defined</dd>
 </dl>
@@ -406,22 +406,22 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 <pre>public&nbsp;byte[]&nbsp;getCurrentStateHash()</pre>
 </li>
 </ul>
-<a name="executeUnordered-byte:A-bftsmart.tom.MessageContext-">
+<a name="executeUnordered-byte:A-tom.MessageContext-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>executeUnordered</h4>
 <pre>public&nbsp;byte[]&nbsp;executeUnordered(byte[]&nbsp;command,
-                               <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>&nbsp;msgCtx)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Executable.html#executeUnordered-byte:A-bftsmart.tom.MessageContext-">Executable</a></code></span></div>
+                               <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>&nbsp;msgCtx)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Executable.html#executeUnordered-byte:A-tom.MessageContext-">Executable</a></code></span></div>
 <div class="block">Method called to execute a request totally ordered.
  
  The message context contains some useful information such as the command
  sender.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/Executable.html#executeUnordered-byte:A-bftsmart.tom.MessageContext-">executeUnordered</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Executable.html" title="interface in bftsmart.tom.server">Executable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/Executable.html#executeUnordered-byte:A-tom.MessageContext-">executeUnordered</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Executable.html" title="interface in tom.server">Executable</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command issue by the client</dd>
 <dd><code>msgCtx</code> - information related with the command</dd>
@@ -430,7 +430,7 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </dl>
 </li>
 </ul>
-<a name="Op-int-byte:A-bftsmart.tom.MessageContext-">
+<a name="Op-int-byte:A-tom.MessageContext-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -438,8 +438,8 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 <h4>Op</h4>
 <pre>public&nbsp;void&nbsp;Op(int&nbsp;CID,
                byte[]&nbsp;requests,
-               <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>&nbsp;msgCtx)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#Op-int-byte:A-bftsmart.tom.MessageContext-">Recoverable</a></code></span></div>
+               <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>&nbsp;msgCtx)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#Op-int-byte:A-tom.MessageContext-">Recoverable</a></code></span></div>
 <div class="block">This method is invoked by ServiceReplica to pass information that was
  decided in a particular consensus instance. This method is always invoked before
  the executor. However, multiple invocations for the same consensus ID may
@@ -448,7 +448,7 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
  the application, noOp(...) is invoked instead.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#Op-int-byte:A-bftsmart.tom.MessageContext-">Op</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#Op-int-byte:A-tom.MessageContext-">Op</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>CID</code> - the consensus instance ID associated with the request</dd>
 <dd><code>requests</code> - A request decided in CID</dd>
@@ -457,7 +457,7 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </dl>
 </li>
 </ul>
-<a name="noOp-int-byte:A:A-bftsmart.tom.MessageContext:A-">
+<a name="noOp-int-byte:A:A-tom.MessageContext:A-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -465,8 +465,8 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 <h4>noOp</h4>
 <pre>public&nbsp;void&nbsp;noOp(int&nbsp;CID,
                  byte[][]&nbsp;operations,
-                 <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>[]&nbsp;msgCtxs)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#noOp-int-byte:A:A-bftsmart.tom.MessageContext:A-">Recoverable</a></code></span></div>
+                 <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>[]&nbsp;msgCtxs)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html#noOp-int-byte:A:A-tom.MessageContext:A-">Recoverable</a></code></span></div>
 <div class="block">This method is invoked by ServiceReplica to indicate that a consensus instance
  finished without delivering anything to the application (e.g., an instance
  only decided a single reconfiguration operation. or an instance where the client
@@ -476,7 +476,7 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
  logs used within the state transfer, but never deliver it to the application</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#noOp-int-byte:A:A-bftsmart.tom.MessageContext:A-">noOp</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in bftsmart.tom.server">Recoverable</a></code></dd>
+<dd><code><a href="../../../../../bftsmart/tom/server/Recoverable.html#noOp-int-byte:A:A-tom.MessageContext:A-">noOp</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../bftsmart/tom/server/Recoverable.html" title="interface in tom.server">Recoverable</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>CID</code> - the consensus instance where the aforementioned condition occurred</dd>
 <dd><code>operations</code> - Operations decided in CID</dd>
@@ -513,14 +513,14 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </dl>
 </li>
 </ul>
-<a name="appExecuteBatch-byte:A:A-bftsmart.tom.MessageContext:A-">
+<a name="appExecuteBatch-byte:A:A-tom.MessageContext:A-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>appExecuteBatch</h4>
 <pre>public abstract&nbsp;byte[][]&nbsp;appExecuteBatch(byte[][]&nbsp;commands,
-                                         <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>[]&nbsp;msgCtxs)</pre>
+                                         <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>[]&nbsp;msgCtxs)</pre>
 <div class="block">Execute a batch of ordered requests</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -531,14 +531,14 @@ implements <a href="../../../../../bftsmart/tom/server/Recoverable.html" title="
 </dl>
 </li>
 </ul>
-<a name="appExecuteUnordered-byte:A-bftsmart.tom.MessageContext-">
+<a name="appExecuteUnordered-byte:A-tom.MessageContext-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>appExecuteUnordered</h4>
 <pre>public abstract&nbsp;byte[]&nbsp;appExecuteUnordered(byte[]&nbsp;command,
-                                           <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in bftsmart.tom">MessageContext</a>&nbsp;msgCtx)</pre>
+                                           <a href="../../../../../bftsmart/tom/MessageContext.html" title="class in tom">MessageContext</a>&nbsp;msgCtx)</pre>
 <div class="block">Execute an unordered request</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>

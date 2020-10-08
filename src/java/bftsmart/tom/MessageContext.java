@@ -262,6 +262,7 @@ public class MessageContext implements Serializable {
     /**
      * @deprecated 
      */
+    @Deprecated
     public void setLastInBatch() {
     	lastInBatch = true;
     }

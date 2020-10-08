@@ -39,12 +39,12 @@
   <!-- SPECIFIC CLASS LOGS -->
   <!--
   
-  <logger name="bftsmart.consensus.roles.AcceptorSSLTLS" level="TRACE"></logger>
-  <logger name="bftsmart.consensus.roles.Acceptor" level="TRACE"></logger>
-  <logger name="bftsmart.communication.server.ServersCommunicationLayerSSLTLS" level="DEBUG"></logger>
+  <logger name="consensus.roles.AcceptorSSLTLS" level="TRACE"></logger>
+  <logger name="consensus.roles.Acceptor" level="TRACE"></logger>
+  <logger name="communication.server.ServersCommunicationLayerSSLTLS" level="DEBUG"></logger>
     	
-   <logger name="bftsmart.reconfiguration.util.ECDSAKeyLoader" level="TRACE"></logger>
+   <logger name="reconfiguration.util.ECDSAKeyLoader" level="TRACE"></logger>
 	-->
-  <logger name="bftsmart.reconfiguration.util.RSAKeyLoader" level="TRACE"></logger>
+  <logger name="reconfiguration.util.RSAKeyLoader" level="TRACE"></logger>
   
 </configuration>

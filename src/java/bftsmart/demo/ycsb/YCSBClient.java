@@ -15,17 +15,15 @@
  */
 package bftsmart.demo.ycsb;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Properties;
-import java.util.Set;
-import java.util.Vector;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import bftsmart.tom.ServiceProxy;
 
-import com.yahoo.ycsb.ByteIterator;
-import com.yahoo.ycsb.DB;
+import site.ycsb.ByteIterator;
+import site.ycsb.DB;
+import site.ycsb.DBException;
+import site.ycsb.Status;
 
 /**
  *
@@ -38,11 +36,7 @@ public class YCSBClient extends DB {
     private ServiceProxy proxy = null;
     private int myId;
 
-    public YCSBClient() {
-    }
-
-    @Override
-    public void init() {
+    public void init() throws DBException {
         Properties props = getProperties();
         int initId = Integer.valueOf((String) props.get("smart-initkey"));
         myId = initId + counter.addAndGet(1);
@@ -50,13 +44,11 @@ public class YCSBClient extends DB {
         System.out.println("YCSBKVClient. Initiated client id: " + myId);
     }
 
-    @Override
-    public int delete(String arg0, String arg1) {
+    public Status delete(String arg0, String arg1) {
         throw new UnsupportedOperationException();
     }
 
-    @Override
-    public int insert(String table, String key,
+    public Status insert(String table, String key,
             HashMap<String, ByteIterator> values) {
 
         Iterator<String> keys = values.keySet().iterator();
@@ -68,26 +60,34 @@ public class YCSBClient extends DB {
         YCSBMessage msg = YCSBMessage.newInsertRequest(table, key, map);
         byte[] reply = proxy.invokeOrdered(msg.getBytes());
         YCSBMessage replyMsg = YCSBMessage.getObject(reply);
-        return replyMsg.getResult();
+        return new Status(String.valueOf(replyMsg.getResult()), replyMsg.getErrorMsg());
     }
 
     @Override
-    public int read(String table, String key,
-            Set<String> fields, HashMap<String, ByteIterator> result) {
+    public Status read(String table, String key, Set<String> fields, Map<String, ByteIterator> result) {
         HashMap<String, byte[]> results = new HashMap<>();
         YCSBMessage request = YCSBMessage.newReadRequest(table, key, fields, results);
         byte[] reply = proxy.invokeUnordered(request.getBytes());
         YCSBMessage replyMsg = YCSBMessage.getObject(reply);
-        return replyMsg.getResult();
+        assert replyMsg != null;
+        return new Status(String.valueOf(replyMsg.getResult()), replyMsg.getErrorMsg());
     }
-
-    @Override
-    public int scan(String arg0, String arg1, int arg2, Set<String> arg3,
+    
+    public Status scan(String arg0, String arg1, int arg2, Set<String> arg3,
             Vector<HashMap<String, ByteIterator>> arg4) {
         throw new UnsupportedOperationException();
     }
 
     @Override
+    public Status update(String table, String key, Map<String, ByteIterator> values) {
+        return null;
+    }
+
+    @Override
+    public Status insert(String table, String key, Map<String, ByteIterator> values) {
+        return null;
+    }
+
     public int update(String table, String key,
             HashMap<String, ByteIterator> values) {
         Iterator<String> keys = values.keySet().iterator();

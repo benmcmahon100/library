@@ -411,7 +411,7 @@ public class TOMConfiguration extends Configuration {
     public String getViewStoreClass() {
         String s = (String) configs.remove("view.storage.handler");
         if (s == null) {
-            return "bftsmart.reconfiguration.views.DefaultViewStorage";
+            return "reconfiguration.views.DefaultViewStorage";
         } else {
             return s;
         }
